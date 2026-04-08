@@ -41,19 +41,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Package Pages artifact
-        run: |
-          mkdir -p .pages-artifact
-          tar --dereference --hard-dereference -cvf .pages-artifact/github-pages.tar -C dist .
-          gzip -f .pages-artifact/github-pages.tar
-
       - name: Upload artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-pages-artifact@v4
         with:
-          name: github-pages
-          path: ./.pages-artifact/github-pages.tar.gz
-          if-no-files-found: error
-          retention-days: 1
+          path: ./dist
 
   deploy:
     environment:
