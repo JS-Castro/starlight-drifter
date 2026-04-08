@@ -1,10 +1,10 @@
+![Starlight Drifter social preview](./public/social-preview.svg)
+
 # Starlight Drifter
 
 A neon browser arcade game about harvesting star cores while surviving escalating drone swarms.
 
 ## Game Glimpse
-
-![Starlight Drifter social preview](./public/social-preview.svg)
 
 ![Opening gameplay snapshot](./public/readme/core-run.png)
 
