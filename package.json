@@ -2,6 +2,8 @@
   "name": "starlight-drifter",
   "private": true,
   "version": "0.1.0",
+  "description": "A neon browser arcade game about harvesting star cores while surviving escalating drone swarms.",
+  "homepage": "https://js-castro.github.io/starlight-drifter/",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,0 +1,60 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="640" fill="#050B14"/>
+  <rect width="1280" height="640" fill="url(#bgGlow)"/>
+  <ellipse cx="976" cy="126" rx="252" ry="132" fill="#61C3FF" fill-opacity="0.16"/>
+  <ellipse cx="278" cy="522" rx="304" ry="170" fill="#FF8A5B" fill-opacity="0.15"/>
+  <ellipse cx="642" cy="312" rx="508" ry="238" fill="#15314D" fill-opacity="0.48" stroke="#6ED3FF" stroke-opacity="0.18" stroke-width="2"/>
+  <g opacity="0.9">
+    <circle cx="118" cy="92" r="3" fill="#DDF4FF"/>
+    <circle cx="212" cy="144" r="2.5" fill="#DDF4FF"/>
+    <circle cx="344" cy="88" r="2" fill="#DDF4FF"/>
+    <circle cx="492" cy="138" r="3" fill="#DDF4FF"/>
+    <circle cx="1114" cy="84" r="3" fill="#DDF4FF"/>
+    <circle cx="1046" cy="172" r="2" fill="#DDF4FF"/>
+    <circle cx="1166" cy="210" r="2.5" fill="#DDF4FF"/>
+    <circle cx="1090" cy="540" r="3" fill="#DDF4FF"/>
+    <circle cx="162" cy="548" r="2.5" fill="#DDF4FF"/>
+    <circle cx="412" cy="520" r="2" fill="#DDF4FF"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M911 263L964 389L911 362L858 389L911 263Z" fill="#79E4FF"/>
+    <path d="M911 263L964 389L911 362L858 389L911 263Z" stroke="#D8F7FF" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M892 403L911 362L930 403" stroke="#FFC765" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g opacity="0.9">
+    <circle cx="1056" cy="278" r="26" fill="#FF7171"/>
+    <circle cx="1056" cy="278" r="10" fill="#19253A"/>
+    <circle cx="1056" cy="278" r="30" stroke="#FFAEAE" stroke-width="4"/>
+    <circle cx="1108" cy="404" r="22" fill="#FF7171"/>
+    <circle cx="1108" cy="404" r="8" fill="#19253A"/>
+    <circle cx="1108" cy="404" r="25" stroke="#FFAEAE" stroke-width="4"/>
+  </g>
+  <g opacity="0.92">
+    <circle cx="792" cy="420" r="16" fill="#FFD166"/>
+    <circle cx="792" cy="420" r="21" stroke="#FFE7A4" stroke-width="4"/>
+    <circle cx="1028" cy="474" r="14" fill="#FFD166"/>
+    <circle cx="1028" cy="474" r="19" stroke="#FFE7A4" stroke-width="4"/>
+  </g>
+  <text x="88" y="214" fill="#EFF6FF" font-family="Space Grotesk, Arial, sans-serif" font-size="84" font-weight="700" letter-spacing="1">STARLIGHT</text>
+  <text x="88" y="304" fill="#EFF6FF" font-family="Space Grotesk, Arial, sans-serif" font-size="84" font-weight="700" letter-spacing="1">DRIFTER</text>
+  <text x="92" y="374" fill="#8FB6D7" font-family="Space Grotesk, Arial, sans-serif" font-size="28" font-weight="500">
+    Harvest star cores. Outrun the swarm.
+  </text>
+  <g opacity="0.96">
+    <rect x="88" y="438" width="202" height="56" rx="28" fill="#0C1827" stroke="#69D2FF" stroke-opacity="0.4"/>
+    <text x="119" y="474" fill="#D9F4FF" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="700">Phaser 3</text>
+    <rect x="306" y="438" width="188" height="56" rx="28" fill="#0C1827" stroke="#FFC173" stroke-opacity="0.4"/>
+    <text x="343" y="474" fill="#FFF1D6" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="700">Browser Game</text>
+  </g>
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(640 320) rotate(90) scale(420 780)">
+      <stop stop-color="#0B1830"/>
+      <stop offset="1" stop-color="#050B14"/>
+    </radialGradient>
+    <filter id="glow" x="822" y="227" width="178" height="210" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur"/>
+    </filter>
+  </defs>
+</svg>

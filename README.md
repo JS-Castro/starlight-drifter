@@ -1,6 +1,6 @@
 # Starlight Drifter
 
-A fast browser-based 2D arcade game built with Phaser 3, Vite, and TypeScript.
+A neon browser arcade game about harvesting star cores while surviving escalating drone swarms.
 
 ## Play Loop
 
@@ -33,3 +33,7 @@ After pushing to `main`, enable Pages in the repository settings with:
 The site will publish at:
 
 `https://js-castro.github.io/starlight-drifter/`
+
+Suggested GitHub repo description:
+
+`Neon browser arcade game about harvesting star cores and surviving drone swarms.`
