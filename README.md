@@ -21,3 +21,15 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Deploy
+
+This repo includes a GitHub Pages workflow.
+
+After pushing to `main`, enable Pages in the repository settings with:
+
+- Source: `GitHub Actions`
+
+The site will publish at:
+
+`https://js-castro.github.io/starlight-drifter/`
