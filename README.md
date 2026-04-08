@@ -2,6 +2,16 @@
 
 A neon browser arcade game about harvesting star cores while surviving escalating drone swarms.
 
+## Game Glimpse
+
+![Starlight Drifter social preview](./public/social-preview.svg)
+
+![Opening gameplay snapshot](./public/readme/core-run.png)
+
+![Swarm pressure gameplay snapshot](./public/readme/swarm-pressure.png)
+
+![Signal lost gameplay snapshot](./public/readme/signal-lost.png)
+
 ## Play Loop
 
 - Pilot the courier ship with `WASD` or the arrow keys.
