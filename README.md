@@ -22,6 +22,12 @@ npm run dev
 npm run build
 ```
 
+## Test
+
+```bash
+npm test
+```
+
 ## Deploy
 
 This repo includes a GitHub Pages workflow.

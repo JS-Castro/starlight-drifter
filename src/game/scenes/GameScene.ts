@@ -1,5 +1,13 @@
 import Phaser from "phaser";
 import { gameEvents } from "../systems/events";
+import {
+  getDroneSpawnDelay,
+  getWaveForElapsedMs
+} from "../systems/progression";
+import {
+  applyCoreCollection,
+  applyDroneHit
+} from "../systems/scoring";
 
 type Core = Phaser.Physics.Arcade.Image;
 type Drone = Phaser.Physics.Arcade.Image;
@@ -149,7 +157,7 @@ export class GameScene extends Phaser.Scene {
 
   private createTimers(): void {
     this.spawnTimer = this.time.addEvent({
-      delay: 1300,
+      delay: getDroneSpawnDelay(this.wave),
       callback: this.spawnDrone,
       callbackScope: this,
       loop: true
@@ -331,9 +339,16 @@ export class GameScene extends Phaser.Scene {
 
   private collectCore(core: Core): void {
     core.destroy();
-    this.score += 10 * this.multiplier;
-    this.multiplier = Math.min(this.multiplier + 1, 6);
-    this.health = Math.min(this.health + 4, 100);
+    const nextState = applyCoreCollection({
+      score: this.score,
+      health: this.health,
+      multiplier: this.multiplier,
+      gameOver: this.gameOver
+    });
+
+    this.score = nextState.score;
+    this.health = nextState.health;
+    this.multiplier = nextState.multiplier;
 
     this.cameras.main.shake(80, 0.002);
     this.emitHud();
@@ -346,13 +361,20 @@ export class GameScene extends Phaser.Scene {
     }
 
     this.lastDamageAt = now;
-    this.health -= 16;
+    const nextState = applyDroneHit({
+      score: this.score,
+      health: this.health,
+      multiplier: this.multiplier,
+      gameOver: this.gameOver
+    });
+
+    this.health = nextState.health;
+    this.gameOver = nextState.gameOver;
     drone.destroy();
     this.cameras.main.flash(100, 255, 120, 120, false);
     this.cameras.main.shake(140, 0.008);
 
-    if (this.health <= 0) {
-      this.health = 0;
+    if (this.gameOver) {
       this.endGame();
     }
 
@@ -360,14 +382,14 @@ export class GameScene extends Phaser.Scene {
   }
 
   private maybeEscalateWave(time: number): void {
-    const nextWave = Math.floor(time / 15000) + 1;
+    const nextWave = getWaveForElapsedMs(time);
     if (nextWave > this.wave) {
       this.wave = nextWave;
 
       if (this.spawnTimer) {
         this.spawnTimer.remove(false);
         this.spawnTimer = this.time.addEvent({
-          delay: Math.max(460, 1300 - (this.wave - 1) * 95),
+          delay: getDroneSpawnDelay(this.wave),
           callback: this.spawnDrone,
           callbackScope: this,
           loop: true
